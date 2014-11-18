@@ -45,11 +45,11 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
         </property>
 
-        <property name="packagesToScan" value="com.sishuok.es"/>
+        <property name="packagesToScan" value="com.sishuok.es,org.dd.note"/>
     </bean>
 
     <jpa:repositories
-            base-package="com.sishuok.es.common"
+            base-package="com.sishuok.es.common,org.dd.note.common.user.repository"
             repository-impl-postfix="Impl"
             factory-class="org.dd.note.common.repository.support.SimpleBaseRepositoryFactoryBean"
             entity-manager-factory-ref="entityManagerFactory"
