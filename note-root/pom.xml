@@ -9,14 +9,14 @@
 	<!-- jar包默认发布的仓库 -->
 	<distributionManagement>
 		<repository>
-			<id>user-release</id>
-			<name>user-release</name>
+			<id>note-release</id>
+			<name>note-release</name>
 			<!-- maven远程release服务仓库 -->
 			<url>http://121.42.24.106:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>user-snapshot</id>
-			<name>user-snapshot</name>
+			<id>note-snapshot</id>
+			<name>note-snapshot</name>
 			<!-- maven远程snapshot服务仓库 -->
 			<url>http://121.42.24.106:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
