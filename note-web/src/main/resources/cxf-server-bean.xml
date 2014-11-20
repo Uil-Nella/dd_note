@@ -11,10 +11,33 @@
 <!-- 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" /> -->
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
-	<jaxws:endpoint id="HelloWorld" implementor="org.dd.note.cxf.service.HelloWorldImpl"
-		address="/HelloWorld" />
+<!-- 	<jaxws:endpoint id="HelloWorld" implementor="org.dd.note.cxf.service.HelloWorldImpl" -->
+<!-- 		address="/HelloWorld" /> -->
 		
-	<jaxws:endpoint id="UserWS" implementor="org.dd.note.cxf.user.service.UserWSImpl"
-		address="/UserWS" />	
+<!-- 	<jaxws:endpoint id="UserWS" implementor="org.dd.note.cxf.user.service.UserWSImpl" -->
+<!-- 		address="/UserWS" />	 -->
+
+
+	<bean id="HelloWorld" class="org.dd.note.cxf.service.HelloWorldImpl" /> 
+    <bean id="UserWS" class="org.dd.note.cxf.user.service.UserWSImpl"></bean> 
+
+    <jaxws:server id="HelloWorldService"  
+        serviceClass="org.dd.note.cxf.service.HelloWorld"  
+        address="/HelloWorld">  
+        <!-- 要暴露的 bean 的引用，上面定义的bean id --> 
+        <jaxws:serviceBean>      
+            <ref bean="HelloWorld"/>  
+        </jaxws:serviceBean> 
+    </jaxws:server> 
+    
+    <jaxws:server id="UserWSService"  
+        serviceClass="org.dd.note.cxf.user.service.UserWS"  
+        address="UserWS">  
+        <!-- 要暴露的 bean 的引用，上面定义的bean id --> 
+        <jaxws:serviceBean>      
+            <ref bean="UserWS"/>  
+        </jaxws:serviceBean> 
+    </jaxws:server>
+
 
 </beans>

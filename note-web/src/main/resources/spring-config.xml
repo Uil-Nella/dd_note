@@ -120,7 +120,7 @@
 
     -->
     <jpa:repositories
-            base-package="org.dd.note,com.sishuok.es.**.repository"
+            base-package="org.dd.note"
             repository-impl-postfix="Impl"
             factory-class="org.dd.note.common.repository.support.SimpleBaseRepositoryFactoryBean"
             entity-manager-factory-ref="entityManagerFactory"
