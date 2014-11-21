@@ -14,10 +14,10 @@
 	<name>parent</name>
 	<url>https://github.com/zhangkaitao/es/parent</url>
 
-	<!-- <modules> -->
-	<!-- <module>../common</module> -->
-	<!-- <module>../web</module> -->
-	<!-- </modules> -->
+	<modules>
+	<module>../note-common</module>
+	<module>../note-web</module>
+	</modules>
 
 	<build>
 		<finalName>${project.artifactId}</finalName>

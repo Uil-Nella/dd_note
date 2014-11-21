@@ -12,5 +12,4 @@
         <property name="arguments" value="${file.upload.dir}"/>
     </bean>
 
-
 </beans>

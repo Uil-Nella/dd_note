@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @WebService(serviceName="UserWS")
 public class UserWSImpl implements UserWS {
 
-	@Autowired
+	@Autowired()
 	protected UserInfoService userInfoService;
 	
 	public String registUser(@WebParam(name="name") String name,@WebParam(name="password") String password) {
@@ -17,7 +17,7 @@ public class UserWSImpl implements UserWS {
 		user.setName(name);
 		user.setPassword(password);
 		UserInfo dbUser = userInfoService.save(user);
-		return user.toString();
+		return dbUser.toString();
 
 	}
 

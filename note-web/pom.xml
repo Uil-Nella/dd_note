@@ -11,6 +11,7 @@
 	<packaging>war</packaging>
 	<name>note-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
 	<build>
 		<finalName>note-web</finalName>
 		<plugins>
@@ -119,6 +120,7 @@
 			<artifactId>note-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

@@ -13,6 +13,9 @@
           http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
     <context:property-placeholder location="classpath:resources.properties"/>
+    
+    <import resource="classpath*:spring-common.xml"/>
+    
 
     <!-- 扫描注解Bean -->
     <context:component-scan base-package="org.dd.note,com.sishuok.es.**.service,com.sishuok.es.**.task,com.sishuok.es.**.extra">
@@ -67,7 +70,7 @@
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSourceProxy"/>
-        <property name="packagesToScan" value="org.dd.note,com.sishuok.es.**.entity"/>
+        <property name="packagesToScan" value="org.dd.note"/>
 
         <property name="persistenceUnitName" value="${jpa.persistenceUnitName}"/>
         <property name="persistenceProvider">
