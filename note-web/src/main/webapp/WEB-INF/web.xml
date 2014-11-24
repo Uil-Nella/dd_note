@@ -13,7 +13,8 @@
          <param-name>contextConfigLocation</param-name>
          <param-value>
              classpath*:spring-common.xml,
-             classpath:spring-config.xml
+             classpath:spring-config.xml,
+             classpath:cxf-server-bean.xml
          </param-value>
      </context-param>
      <listener>
@@ -131,10 +132,10 @@
 
 
 	 <!-- CXF Server配置 -->  
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:cxf-server-bean.xml</param-value>
-	</context-param>
+<!-- 	<context-param> -->
+<!-- 		<param-name>contextConfigLocation</param-name> -->
+<!-- 		<param-value>classpath:cxf-server-bean.xml</param-value> -->
+<!-- 	</context-param> -->
 
 	<!-- CXF Servlet配置 -->
 	<servlet>

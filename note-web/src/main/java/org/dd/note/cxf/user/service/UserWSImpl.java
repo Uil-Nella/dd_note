@@ -5,6 +5,7 @@ import javax.jws.WebService;
 
 import org.dd.note.common.user.UserInfo;
 import org.dd.note.common.user.service.UserInfoService;
+import org.dd.note.common.utils.SpringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 @WebService(serviceName="UserWS")
 public class UserWSImpl implements UserWS {
@@ -20,5 +21,14 @@ public class UserWSImpl implements UserWS {
 		return dbUser.toString();
 
 	}
+
+	public UserInfoService getUserInfoService() {
+		return userInfoService;
+	}
+
+	public void setUserInfoService(UserInfoService userInfoService) {
+		this.userInfoService = userInfoService;
+	}
+	
 
 }

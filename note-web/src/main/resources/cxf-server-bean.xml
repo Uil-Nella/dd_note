@@ -19,7 +19,8 @@
 
 
 	<bean id="HelloWorld" class="org.dd.note.cxf.service.HelloWorldImpl" /> 
-    <bean id="UserWS" class="org.dd.note.cxf.user.service.UserWSImpl"></bean> 
+    <bean id="UserWS" class="org.dd.note.cxf.user.service.UserWSImpl">
+    </bean> 
 
     <jaxws:server id="HelloWorldService"  
         serviceClass="org.dd.note.cxf.service.HelloWorld"  
