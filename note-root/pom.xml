@@ -5,24 +5,34 @@
 	<artifactId>note-root</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
+	<!-- jar包默认发布的仓库 -->
+	<!-- <distributionManagement> -->
+	<!-- <repository> -->
+	<!-- <id>note-release</id> -->
+	<!-- <name>note-release</name> -->
+	<!-- maven远程release服务仓库 -->
+	<!-- <url>http://121.42.24.106:8081/nexus/content/repositories/releases/</url> -->
+	<!-- </repository> -->
+	<!-- <snapshotRepository> -->
+	<!-- <id>note-snapshot</id> -->
+	<!-- <name>note-snapshot</name> -->
+	<!-- maven远程snapshot服务仓库 -->
+	<!-- <url>http://121.42.24.106:8081/nexus/content/repositories/snapshots/</url> -->
+	<!-- </snapshotRepository> -->
+	<!-- </distributionManagement> -->
 	<!-- jar包默认发布的仓库 -->
 	<distributionManagement>
 		<repository>
-			<id>user-release</id>
-			<name>user-release</name>
-			<!-- maven远程release服务仓库 -->
-			<url>http://121.42.24.106:8081/nexus/content/repositories/releases/</url>
+			<id>note-release</id>
+			<url>http://localhost:8081/nexus/content/repositories/note-release</url>
 		</repository>
 		<snapshotRepository>
-			<id>user-snapshot</id>
-			<name>user-snapshot</name>
-			<!-- maven远程snapshot服务仓库 -->
-			<url>http://121.42.24.106:8081/nexus/content/repositories/snapshots/</url>
+			<id>note-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/note-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
-	
 	<name>dd_note</name>
 	<url>https://github.com/qq291462491/dd_note</url>
 	<organization>
@@ -31,8 +41,9 @@
 	</organization>
 
 <!-- 	<modules> -->
-<!-- 		<module>parent</module> -->
-		<!--<module>codegen</module> -->
+<!-- 	<module>../note-parent</module> -->
+<!-- 	<module>../note-common</module> -->
+<!-- 	<module>../note-web</module> -->
 <!-- 	</modules> -->
 
 	<build>
@@ -127,13 +138,13 @@
 			<id>Codehaus repository</id>
 			<url>http://repository.codehaus.org/</url>
 		</pluginRepository>
-<!-- 		googlecode找不到暂时先注释 -->
-<!-- 		<pluginRepository> -->
-<!-- 			<id>maven-db-plugin-repo</id> -->
-<!-- 			<name>maven db plugin repository</name> -->
-<!-- 			<url>https://maven-db-plugin.googlecode.com/svn/maven/repo</url> -->
-<!-- 			<layout>default</layout> -->
-<!-- 		</pluginRepository> -->
+		<!-- googlecode找不到暂时先注释 -->
+		<!-- <pluginRepository> -->
+		<!-- <id>maven-db-plugin-repo</id> -->
+		<!-- <name>maven db plugin repository</name> -->
+		<!-- <url>https://maven-db-plugin.googlecode.com/svn/maven/repo</url> -->
+		<!-- <layout>default</layout> -->
+		<!-- </pluginRepository> -->
 
 	</pluginRepositories>
 
@@ -183,15 +194,15 @@
 	</issueManagement>
 
 	<!-- 分发管理 -->
-<!-- 	<distributionManagement> -->
-		<!-- mvn site:deploy 部署的位置 -->
-<!-- 		<site> -->
-<!-- 			<id>local</id> -->
-<!-- 			<name>filesystem</name> -->
-			<!-- 修改到磁盘的相应位置 -->
-<!-- 			<url>file:E:\target\site</url> -->
-<!-- 		</site> -->
-<!-- 	</distributionManagement> -->
+	<!-- <distributionManagement> -->
+	<!-- mvn site:deploy 部署的位置 -->
+	<!-- <site> -->
+	<!-- <id>local</id> -->
+	<!-- <name>filesystem</name> -->
+	<!-- 修改到磁盘的相应位置 -->
+	<!-- <url>file:E:\target\site</url> -->
+	<!-- </site> -->
+	<!-- </distributionManagement> -->
 
 	<!-- 版本控制信息 -->
 	<scm>

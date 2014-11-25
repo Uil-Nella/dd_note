@@ -9,7 +9,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 @DependsOn("userInfoRepository")
-@Service()
+@Service("userInfoService")
 public class UserInfoService extends BaseService<UserInfo, Long> {
 
 	@Autowired
