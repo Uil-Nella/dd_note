@@ -19,8 +19,9 @@
 
 
 	<bean id="HelloWorld" class="org.dd.note.cxf.service.HelloWorldImpl" /> 
-    <bean id="UserWS" class="org.dd.note.cxf.user.service.UserWSImpl">
-    </bean> 
+    <bean id="UserWS" class="org.dd.note.cxf.user.service.UserWSImpl"/>
+    <bean id="YYUserWS" class="org.dd.note.cxf.yyuser.service.YYUserWSImpl"/>
+    
 
     <jaxws:server id="HelloWorldService"  
         serviceClass="org.dd.note.cxf.service.HelloWorld"  
@@ -37,6 +38,16 @@
         <!-- 要暴露的 bean 的引用，上面定义的bean id --> 
         <jaxws:serviceBean>      
             <ref bean="UserWS"/>  
+        </jaxws:serviceBean> 
+    </jaxws:server>
+    
+    
+    <jaxws:server id="YYUserWSService"  
+        serviceClass="org.dd.note.cxf.yyuser.service.YYUserWS"  
+        address="/YYUserWS">  
+        <!-- 要暴露的 bean 的引用，上面定义的bean id --> 
+        <jaxws:serviceBean>      
+            <ref bean="YYUserWS"/>  
         </jaxws:serviceBean> 
     </jaxws:server>
 
