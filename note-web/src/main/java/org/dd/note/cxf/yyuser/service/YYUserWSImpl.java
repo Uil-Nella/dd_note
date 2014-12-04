@@ -43,6 +43,18 @@ public class YYUserWSImpl implements YYUserWS {
 	public void setYyUserService(YYUserService yyUserService) {
 		this.yyUserService = yyUserService;
 	}
+	/**
+	 * 更新用户信息
+	 */
+	@Override
+	public String updateUser(@WebParam(name="userid") String userid,@WebParam(name="username") String username,@WebParam(name="password") String password) {
+		YYUser user = new YYUser();
+		user.setUserid(userid);
+		user.setUsername(username);
+		user.setPassword(password);
+		yyUserService.update(user);
+		return user.toString();
+	}
 
 	
 	
